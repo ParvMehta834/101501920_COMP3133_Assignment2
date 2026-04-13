@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@angular/forms": "^21.2.8",
+    "@apollo/client": "^4.1.7",
+    "apollo-angular": "^13.0.0",
+    "bootstrap": "^5.3.8",
+    "graphql": "^16.13.2"
+  }
+}

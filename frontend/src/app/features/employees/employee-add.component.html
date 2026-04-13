@@ -1,0 +1,63 @@
+<div class="container mt-4" style="max-width: 800px;">
+  <div class="card shadow p-4">
+    <h2 class="mb-4">Add Employee</h2>
+
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">First Name</label>
+          <input class="form-control" formControlName="first_name" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Last Name</label>
+          <input class="form-control" formControlName="last_name" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Email</label>
+          <input class="form-control" formControlName="email" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Gender</label>
+          <select class="form-select" formControlName="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Designation</label>
+          <input class="form-control" formControlName="designation" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Salary</label>
+          <input type="number" class="form-control" formControlName="salary" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Date of Joining</label>
+          <input type="date" class="form-control" formControlName="date_of_joining" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Department</label>
+          <input class="form-control" formControlName="department" />
+        </div>
+
+        <div class="col-md-12 mb-3">
+          <label class="form-label">Employee Photo</label>
+          <input type="file" class="form-control" (change)="onFileChange($event)" />
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success me-2" [disabled]="uploading">
+        {{ uploading ? 'Uploading...' : 'Save Employee' }}
+      </button>
+      <a routerLink="/employees" class="btn btn-secondary">Cancel</a>
+    </form>
+  </div>
+</div>
