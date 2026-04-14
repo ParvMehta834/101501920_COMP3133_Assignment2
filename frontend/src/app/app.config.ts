@@ -21,7 +21,7 @@ export const appConfig: ApplicationConfig = {
 
       return {
         link: httpLink.create({
-          uri: 'http://localhost:5000/graphql'
+          uri: 'https://one01501920-comp3133-assignment2.onrender.com/graphql'
         }),
         cache: new InMemoryCache(),
       };
